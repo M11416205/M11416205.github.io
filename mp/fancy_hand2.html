@@ -219,12 +219,27 @@
 
       function drawSciFiSkeleton(hand, gx, gy) {
         stroke(red(mainColor), green(mainColor), blue(mainColor), 80);
+        strokeWeight(2);
         let connections = handPose.getConnections();
         for (let i = 0; i < connections.length; i++) {
           let a = connections[i][0], b = connections[i][1];
           line(map(hand.keypoints[a].x, 0, 640, 0, width) + gx, map(hand.keypoints[a].y, 0, 480, 0, height) + gy,
                map(hand.keypoints[b].x, 0, 640, 0, width) + gx, map(hand.keypoints[b].y, 0, 480, 0, height) + gy);
         }
+        
+        // 放大每個座標點並給予不同顏色
+        colorMode(HSB, 360, 100, 100, 1);
+        for (let i = 0; i < hand.keypoints.length; i++) {
+          let k = hand.keypoints[i];
+          let x = map(k.x, 0, 640, 0, width) + gx;
+          let y = map(k.y, 0, 480, 0, height) + gy;
+          
+          fill((i * (360 / 21)) % 360, 85, 100); // 將 360 度均分成 21 色
+          noStroke();
+          circle(x, y, 20); // 放大座標點，直徑 20
+        }
+        colorMode(RGB, 255); // 切換回 RGB 避免干擾
+        strokeWeight(1);
       }
 
       function drawFingertips(hand, gx, gy) {
