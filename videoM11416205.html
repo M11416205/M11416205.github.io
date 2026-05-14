@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>葡萄牙自助旅行研究報告 | Portugal Travel Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        portugal: {
+                            gold: '#C5A059',
+                            red: '#E23D3D',
+                            green: '#006633',
+                            blue: '#1A4F8B',
+                            dark: '#0F172A',
+                            sand: '#FDFCF8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FDFCF8;
+            color: #1E293B;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #006633 0%, #E23D3D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bento-item {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[60vh] flex flex-col items-center justify-center text-center px-6 py-20 bg-portugal-dark text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-20 pointer-events-none">
+            <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-portugal-green rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-portugal-red rounded-full blur-[120px]"></div>
+        </div>
+        
+        <div class="relative z-10 animate-fade-in-up">
+            <span class="inline-block px-4 py-1 mb-4 text-xs font-bold tracking-[0.2em] uppercase bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+                Explore Portugal
+            </span>
+            <h1 class="text-5xl md:text-7xl font-display font-extrabold mb-6">葡萄牙自助旅行<br><span class="gradient-text">研究報告</span></h1>
+            <p class="max-w-2xl mx-auto text-lg text-slate-300 font-light leading-relaxed">
+                探索大航海時代的榮光，品味大西洋畔的文化底蘊。一份關於歐洲最西端的深度旅遊指南。
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
+        
+        <!-- Top: Infographic -->
+        <section class="mb-16">
+            <div class="bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-slate-100 group">
+                <div class="p-8 border-b border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div>
+                        <h2 class="text-2xl font-bold font-display flex items-center gap-2">
+                            <span class="w-2 h-8 bg-portugal-red rounded-full"></span>
+                            旅遊資訊圖表
+                        </h2>
+                        <p class="text-slate-500 text-sm mt-1">Infographic Overview</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs rounded-full">16:9 規格</span>
+                        <span class="px-3 py-1 bg-portugal-green/10 text-portugal-green text-xs rounded-full">Visual Guide</span>
+                    </div>
+                </div>
+                <div class="relative aspect-video w-full bg-slate-50 overflow-hidden">
+                    <img src="https://opal.google/board/blobs/c0b16451-46b5-4ef8-bbef-78a388cb43f5" alt="葡萄牙自助旅行資訊圖表" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Mid: Video & Summary Bento Grid -->
+        <section class="mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- Short Video -->
+                <div class="lg:col-span-7 bg-portugal-dark rounded-[2rem] overflow-hidden shadow-xl flex flex-col">
+                    <div class="p-6 bg-white/5 border-b border-white/10">
+                         <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                            <svg class="w-5 h-5 text-portugal-red" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
+                            景點精華影片
+                        </h3>
+                    </div>
+                    <div class="relative flex-grow flex items-center justify-center bg-black aspect-video lg:aspect-auto">
+                        <video src="https://opal.google/board/blobs/b3bbbf1b-804f-485d-81b1-826c965004ca" class="w-full h-full object-contain" controls autoplay muted loop></video>
+                    </div>
+                    <div class="p-6 bg-slate-900 text-slate-400">
+                        <div class="flex items-center gap-4">
+                            <div class="p-3 bg-portugal-red/20 rounded-full">
+                                <svg class="w-6 h-6 text-portugal-red animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+                            </div>
+                            <div class="flex-grow">
+                                <p class="text-sm font-medium text-slate-200">正在播放：輕快吉他背景音樂</p>
+                                <audio src="https://opal.google/board/blobs/ab885a73-72c8-46f2-9c2f-f04a32968552" class="w-full mt-2 h-8" controls></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summary Bento -->
+                <div class="lg:col-span-5 grid grid-cols-1 gap-6">
+                    <div class="bg-portugal-red p-8 rounded-[2rem] text-white flex flex-col justify-between shadow-lg bento-item">
+                        <h3 class="text-2xl font-bold mb-4 font-display">研究摘要</h3>
+                        <ul class="space-y-3 text-sm font-light">
+                            <li class="flex gap-3"><span class="font-bold">時節：</span>春秋兩季最適 (4-6月/9-10月)</li>
+                            <li class="flex gap-3"><span class="font-bold">簽證：</span>台灣免簽 (2025新制 ETIAS 預警)</li>
+                            <li class="flex gap-3"><span class="font-bold">交通：</span>火車早鳥、里斯本28號電車</li>
+                            <li class="flex gap-3"><span class="font-bold">美食：</span>正宗蛋塔、鱈魚、波多酒</li>
+                        </ul>
+                    </div>
+                    <div class="bg-portugal-green p-8 rounded-[2rem] text-white flex flex-col justify-between shadow-lg bento-item">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 font-display">安全提醒</h3>
+                            <p class="text-sm opacity-90 leading-relaxed italic">「雖治安良好，但在觀光熱區仍需嚴防扒手，並留意餐廳的小菜計費規則。」</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-white/20">
+                            <span class="text-xs font-mono uppercase tracking-widest">Safety First</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom: Detailed Report -->
+        <section class="mb-20 bg-white rounded-[2.5rem] shadow-xl overflow-hidden border border-slate-100">
+            <div class="p-10 md:p-16">
+                <article class="prose prose-slate max-w-none">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-800 mb-4 italic">葡萄牙自助旅行研究報告全文</h2>
+                        <div class="w-24 h-1 bg-portugal-gold mx-auto rounded-full"></div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-slate-600 leading-relaxed">
+                        <div class="space-y-8">
+                            <div>
+                                <h4 class="text-xl font-bold text-portugal-blue mb-3 flex items-center gap-2">
+                                    <span class="text-portugal-gold">01</span> 前言與地理氣候概況
+                                </h4>
+                                <p>葡萄牙位於伊比利半島最西端，面朝大西洋，擁有豐富的航海歷史與獨特的文化遺產。氣候呈現南北差異：北部受海洋影響較大，涼爽多雨；南部則屬地中海型氣候，夏季炎熱乾燥。春、秋兩季是最適宜的造訪時間。</p>
+                            </div>
+
+                            <div>
+                                <h4 class="text-xl font-bold text-portugal-blue mb-3 flex items-center gap-2">
+                                    <span class="text-portugal-gold">02</span> 簽證與入境法規
+                                </h4>
+                                <p>目前持載有身分證字號之中華民國護照可享免簽證服務。需注意 2025 年將實施 <span class="font-semibold text-slate-800">ETIAS 系統</span>，屆時免簽旅客在入境前須完成線上授權申請。</p>
+                            </div>
+
+                            <div>
+                                <h4 class="text-xl font-bold text-portugal-blue mb-3 flex items-center gap-2">
+                                    <span class="text-portugal-gold">03</span> 交通與移動建議
+                                </h4>
+                                <p>葡萄牙鐵路 (CP) 為主要選擇，包含高鐵 (AP) 與城際快車 (IC)，官網提前 5-8 週購買可享早鳥折扣。里斯本則以 28 號黃色電車聞名，可購買 Viva Viagem 卡使用。</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-8">
+                            <div>
+                                <h4 class="text-xl font-bold text-portugal-blue mb-3 flex items-center gap-2">
+                                    <span class="text-portugal-gold">04</span> 熱門景點與行程規劃
+                                </h4>
+                                <ul class="list-disc pl-5 space-y-2">
+                                    <li><span class="font-medium text-slate-800">里斯本：</span>熱羅尼莫斯修道院、貝倫塔、阿爾法瑪區。</li>
+                                    <li><span class="font-medium text-slate-800">波多：</span>路易一世大橋、聖本篤車站瓷磚。</li>
+                                    <li><span class="font-medium text-slate-800">辛特拉：</span>佩納宮等如童話般的城堡。</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 class="text-xl font-bold text-portugal-blue mb-3 flex items-center gap-2">
+                                    <span class="text-portugal-gold">05</span> 飲食文化與特色美食
+                                </h4>
+                                <p>必嚐國民美食<span class="text-portugal-red font-medium">鱈魚 (Bacalhau)</span>、發源於貝倫區的<span class="text-portugal-red font-medium">葡式蛋塔</span>、保留鮮甜湯汁的<span class="text-portugal-red font-medium">海鮮燉飯</span>與醇厚的<span class="text-portugal-red font-medium">波多酒</span>。</p>
+                            </div>
+
+                            <div>
+                                <h4 class="text-xl font-bold text-portugal-blue mb-3 flex items-center gap-2">
+                                    <span class="text-portugal-gold">06</span> 旅遊安全與注意事項
+                                </h4>
+                                <p>治安良好但需嚴防扒手。餐廳入座後的橄欖或起司等小菜 (Couvert) 通常為收費項目，若不食用建議請服務生撤走以免產生額外費用。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 p-8 bg-slate-50 rounded-2xl border-l-4 border-portugal-gold italic">
+                        <h4 class="not-italic font-bold text-slate-800 mb-2 underline decoration-portugal-red decoration-2">簡要結論</h4>
+                        葡萄牙以平易近人物價、豐富歷史遺產與溫暖人情味，成為歐洲自助旅行首選。2024年後行程需多依賴提前預訂與數位規劃。只要掌握火車早鳥票與治安防範，能提供極高性價比的旅遊體驗。
+                    </div>
+
+                    <div class="mt-12 pt-8 border-t border-slate-200">
+                        <h5 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">引用文獻來源</h5>
+                        <ol class="text-xs text-slate-500 space-y-1">
+                            <li>Comboios de Portugal. (2024). Official Railway Timetables and Fares Update.</li>
+                            <li>Visit Portugal. (2024). Official Tourism Portal.</li>
+                            <li>European Commission. (2024). ETIAS Official Documentation.</li>
+                            <li>Tripadvisor. (2025). Portugal Travel Guide.</li>
+                            <li>背包客棧. (2024-2026). 歐洲版－葡萄牙自助旅行攻略.</li>
+                        </ol>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Final Layout Component: Centered Footer Info -->
+        <div class="mb-20 py-10 border-t border-slate-200 text-center">
+            <div class="mb-2">
+                <span class="text-slate-400 text-xs font-mono uppercase tracking-widest">Student Information</span>
+            </div>
+            <p class="text-slate-800 font-medium">學號：M11416205</p>
+            <p class="text-lg mt-1">【主題探索報告】by <i class="text-portugal-red font-bold">Tony Tsao</i></p>
+        </div>
+
+    </main>
+
+</body>
+</html>
